@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
 import {Divider, Form, Dropdown, TextArea, Card, List} from 'semantic-ui-react'
-import { greetingAction } from './actions/simpleAction';
+import { greetingAction } from './actions/greetingAction';
 
 const languageOptions = [
     {
@@ -108,7 +108,7 @@ const mapStateToProps = state => {
     return ({
         greetings: state.greetingsReducer.greetings
     });
-}
+};
 
 const mapDispatchToProps = dispatch => ({
     simpleAction: (language, names) => dispatch(greetingAction(language, names))
